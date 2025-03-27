@@ -11,6 +11,9 @@ export default {
       colors: {
         primary: '#001f49',
       },
+      fontFamily: {
+        afacad: ['"Afacad Flux"', 'sans-serif']
+      },
       backgroundImage: {
         banner: 'url(./src/assets/img/banner.webp)'
       }
@@ -34,14 +37,18 @@ export default {
           background: '#fff'
         },
         '.login-option': {
-          width: '50%',
+          width: '60%',
           height: '45px',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          gap: '50px',
-          border: '1px solid #fff',
-          borderRadius: '50px'
+          border: '1px solid #a0a0a0',
+          borderRadius: '50px',
+          position: 'relative',
+          cursor: 'pointer'
+        },
+        '.login-option:hover': {
+          border: '1px solid #fff'
         },
       })
     }
