@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+import tailwindScrollbar from 'tailwind-scrollbar';
+
 export default {
   important: true,
   mode: 'jit',
@@ -20,6 +23,7 @@ export default {
     },
   },
   plugins: [
+    tailwindScrollbar,
     function({addComponents}){
       addComponents({
         '.flex-box': {
@@ -50,8 +54,51 @@ export default {
         '.login-option:hover': {
           border: '1px solid #fff'
         },
+        '.nav-li': {
+          color: '#A3A3A3',
+          fontSize: '20px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          gap: '15px',
+          cursor: 'pointer'
+        },
+        '.nav-li:hover': {
+          color: '#fff'
+        },
+        '.slides': {
+          width: '100%',
+          height: '25%',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          flexDirection: 'column'
+        },
+        '.most-listened': {
+          width: '100%',
+          height: '120%',
+          background: '#ffffff42',
+          borderRadius: '5px',
+          cursor: 'pointer'
+        },
+        '.most-listened:hover': {
+          background: '#ffffff60',
+        },
+        '.scrollbar-body': {
+          '&::-webkit-scrollbar': {
+            width: '10px',
+            height: '100%',
+          },
+          '&::-webkit-scrollbar-thumb': {
+            backgroundColor: '#A3A3A3',
+            cursor: 'pointer',
+          },
+          '&::-webkit-scrollbar-track': {
+            backgroundColor: '#000000',
+          },
+        },
       })
-    }
+    },
   ],
 }
 
